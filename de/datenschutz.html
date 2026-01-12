@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - Vanish</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1d1d1f;
+            --text-secondary: #424245;
+            --header-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --section-bg: #ffffff;
+            --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --accent: #1a1a2e;
+            --border: #e5e5e7;
+            --link-bg: #1a1a2e;
+            --link-bg-hover: #16213e;
+            --link-text: #ffffff;
+            --footer: #86868b;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --section-bg: #1c1c1e;
+                --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+                --border: #38383a;
+                --link-bg: #2c2c2e;
+                --link-bg-hover: #3a3a3c;
+                --footer: #86868b;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            opacity: 0.85;
+            font-size: 15px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .section {
+            background: var(--section-bg);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--section-shadow);
+        }
+        h2 {
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        a {
+            color: var(--accent);
+        }
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #6eb5ff;
+            }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 28px;
+            background: var(--link-bg);
+            color: var(--link-text);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background 0.2s ease;
+        }
+        .back-link:hover {
+            background: var(--link-bg-hover);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--footer);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .highlight-box {
+            background: rgba(26, 26, 46, 0.06);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        @media (prefers-color-scheme: dark) {
+            .highlight-box {
+                background: rgba(255, 255, 255, 0.06);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Datenschutzerklärung</h1>
+        <p>Vanish · Stand: Januar 2025</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Verantwortlicher</h2>
+            <p>Verantwortlich für die Datenverarbeitung in dieser App ist:</p>
+            <div class="highlight-box">
+                <strong>CodeCraft</strong><br>
+                Matthias Steins<br>
+                Stationsweg 69<br>
+                41068 Mönchengladbach<br>
+                E-Mail: <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. Was ist Vanish?</h2>
+            <p>Vanish ist eine Kamera-App, mit der du Fotos aufnehmen kannst, die nach einer von dir festgelegten Zeit <strong>automatisch gelöscht</strong> werden. Perfekt für temporäre Aufnahmen wie Parkplatzfotos, Preisschilder oder Passwörter.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. Welche Daten werden verarbeitet?</h2>
+            <p>Vanish speichert alle Daten <strong>ausschließlich lokal auf deinem Gerät</strong>:</p>
+            <ul>
+                <li><strong>Fotos:</strong> Werden im Vanish-Album in deiner Foto-Mediathek gespeichert</li>
+                <li><strong>Timer-Einstellungen:</strong> Deine benutzerdefinierten Lösch-Zeitpunkte</li>
+                <li><strong>Preset-Konfigurationen:</strong> Namen, Icons und Zeiteinstellungen</li>
+            </ul>
+            <p><strong>Wichtig:</strong> Wir haben keinen Zugriff auf deine Fotos oder andere Daten. Alles bleibt auf deinem Gerät.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Berechtigungen</h2>
+            <p>Vanish benötigt folgende Berechtigungen:</p>
+            <ul>
+                <li><strong>Kamera:</strong> Um Fotos aufzunehmen</li>
+                <li><strong>Fotos:</strong> Um Bilder im Vanish-Album zu speichern und nach Ablauf zu löschen</li>
+                <li><strong>Hintergrundaktualisierung:</strong> Um abgelaufene Fotos auch im Hintergrund zu löschen</li>
+            </ul>
+            <p>Du kannst diese Berechtigungen jederzeit in den iOS-Einstellungen widerrufen.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Datenweitergabe</h2>
+            <p>Wir geben <strong>keine</strong> Daten an Dritte weiter. Es gibt:</p>
+            <ul>
+                <li>Keine Werbung</li>
+                <li>Keine Tracking-Dienste</li>
+                <li>Keine Cloud-Synchronisation</li>
+                <li>Keine Analyse-Tools</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Deine Rechte</h2>
+            <p>Du hast jederzeit folgende Rechte:</p>
+            <ul>
+                <li><strong>Auskunft:</strong> Alle Daten sind auf deinem Gerät einsehbar</li>
+                <li><strong>Löschung:</strong> Lösche die App und alle Daten werden entfernt</li>
+                <li><strong>Kontrolle:</strong> Du bestimmst, wann Fotos gelöscht werden</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Kontakt</h2>
+            <p>Bei Fragen zum Datenschutz erreichst du uns unter:</p>
+            <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+        </div>
+
+        <a href="../index.html" class="back-link">← Zurück zur Übersicht</a>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 CodeCraft · <a href="impressum.html">Impressum</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanish - Legal</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1d1d1f;
+            --text-secondary: #424245;
+            --header-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --card-bg: #ffffff;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --card-border: rgba(0, 0, 0, 0.06);
+            --footer: #86868b;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --card-bg: #1c1c1e;
+                --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                --card-border: rgba(255, 255, 255, 0.1);
+                --footer: #86868b;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        .header p {
+            opacity: 0.85;
+            font-size: 18px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 24px;
+            flex: 1;
+        }
+        .language-section {
+            margin-bottom: 40px;
+        }
+        .language-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            padding-left: 4px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--card-border);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        @media (prefers-color-scheme: dark) {
+            .card:hover {
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            }
+        }
+        .card-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--footer);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Vanish</h1>
+        <p>Legal Information & Privacy</p>
+    </div>
+
+    <div class="container">
+        <div class="language-section">
+            <div class="language-title">Deutsch</div>
+            <div class="card-grid">
+                <a href="de/datenschutz.html" class="card">
+                    <div class="card-icon">🔒</div>
+                    <div class="card-title">Datenschutz</div>
+                    <div class="card-desc">Wie wir deine Daten schützen</div>
+                </a>
+                <a href="de/nutzungsbedingungen.html" class="card">
+                    <div class="card-icon">📋</div>
+                    <div class="card-title">Nutzungsbedingungen</div>
+                    <div class="card-desc">Regeln für die App-Nutzung</div>
+                </a>
+                <a href="de/impressum.html" class="card">
+                    <div class="card-icon">ℹ️</div>
+                    <div class="card-title">Impressum</div>
+                    <div class="card-desc">Rechtliche Angaben</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="language-section">
+            <div class="language-title">English</div>
+            <div class="card-grid">
+                <a href="en/privacy.html" class="card">
+                    <div class="card-icon">🔒</div>
+                    <div class="card-title">Privacy Policy</div>
+                    <div class="card-desc">How we protect your data</div>
+                </a>
+                <a href="en/terms.html" class="card">
+                    <div class="card-icon">📋</div>
+                    <div class="card-title">Terms of Service</div>
+                    <div class="card-desc">Rules for using the app</div>
+                </a>
+                <a href="en/imprint.html" class="card">
+                    <div class="card-icon">ℹ️</div>
+                    <div class="card-title">Imprint</div>
+                    <div class="card-desc">Legal information</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 CodeCraft · <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+    </div>
+</body>
+</html>

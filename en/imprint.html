@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint - Vanish</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1d1d1f;
+            --text-secondary: #424245;
+            --header-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --section-bg: #ffffff;
+            --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --accent: #1a1a2e;
+            --border: #e5e5e7;
+            --link-bg: #1a1a2e;
+            --link-bg-hover: #16213e;
+            --link-text: #ffffff;
+            --footer: #86868b;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --section-bg: #1c1c1e;
+                --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+                --border: #38383a;
+                --link-bg: #2c2c2e;
+                --link-bg-hover: #3a3a3c;
+                --footer: #86868b;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            opacity: 0.85;
+            font-size: 15px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .section {
+            background: var(--section-bg);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--section-shadow);
+        }
+        h2 {
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+        }
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        a {
+            color: var(--accent);
+        }
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #6eb5ff;
+            }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 28px;
+            background: var(--link-bg);
+            color: var(--link-text);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background 0.2s ease;
+        }
+        .back-link:hover {
+            background: var(--link-bg-hover);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--footer);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .contact-box {
+            background: rgba(26, 26, 46, 0.06);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+        @media (prefers-color-scheme: dark) {
+            .contact-box {
+                background: rgba(255, 255, 255, 0.06);
+            }
+        }
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+        .contact-box p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Imprint</h1>
+        <p>Vanish · Legal Information</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Provider</h2>
+            <div class="contact-box">
+                <p><strong>CodeCraft</strong></p>
+                <p>Matthias Steins</p>
+                <p>Stationsweg 69</p>
+                <p>41068 Moenchengladbach</p>
+                <p>Germany</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <div class="contact-box">
+                <p><strong>Email:</strong> <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Responsible for Content</h2>
+            <p>Matthias Steins<br>
+            Address as above</p>
+        </div>
+
+        <div class="section">
+            <h2>Liability for Content</h2>
+            <p>As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to Section 7 (1) of the German Telemedia Act (TMG). However, according to Sections 8 to 10 TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+        </div>
+
+        <div class="section">
+            <h2>Liability for Links</h2>
+            <p>Our offering contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this third-party content. The respective provider or operator of the linked pages is always responsible for the content of the linked pages.</p>
+        </div>
+
+        <div class="section">
+            <h2>Copyright</h2>
+            <p>The content and works created by the site operator on these pages are subject to German copyright law. Reproduction, editing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator.</p>
+        </div>
+
+        <div class="section">
+            <h2>Dispute Resolution</h2>
+            <p>The European Commission provides a platform for online dispute resolution (OS): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a></p>
+            <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to Overview</a>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 CodeCraft · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+    </div>
+</body>
+</html>

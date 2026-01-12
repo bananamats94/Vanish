@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Vanish</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1d1d1f;
+            --text-secondary: #424245;
+            --header-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --section-bg: #ffffff;
+            --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --accent: #1a1a2e;
+            --border: #e5e5e7;
+            --link-bg: #1a1a2e;
+            --link-bg-hover: #16213e;
+            --link-text: #ffffff;
+            --footer: #86868b;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --section-bg: #1c1c1e;
+                --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+                --border: #38383a;
+                --link-bg: #2c2c2e;
+                --link-bg-hover: #3a3a3c;
+                --footer: #86868b;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            opacity: 0.85;
+            font-size: 15px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .section {
+            background: var(--section-bg);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--section-shadow);
+        }
+        h2 {
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        a {
+            color: var(--accent);
+        }
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #6eb5ff;
+            }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 28px;
+            background: var(--link-bg);
+            color: var(--link-text);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background 0.2s ease;
+        }
+        .back-link:hover {
+            background: var(--link-bg-hover);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--footer);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .warning-box {
+            background: rgba(255, 149, 0, 0.1);
+            border-left: 4px solid #ff9500;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        @media (prefers-color-scheme: dark) {
+            .warning-box {
+                background: rgba(255, 149, 0, 0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Terms of Service</h1>
+        <p>Vanish · Last updated: January 2025</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Scope</h2>
+            <p>These terms of service apply to the use of the Vanish App ("App"). By using the App, you accept these terms.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Service Description</h2>
+            <p>Vanish is a camera app with automatic photo deletion:</p>
+            <ul>
+                <li>Take photos with a predefined deletion timer</li>
+                <li>Automatic deletion after the set time expires</li>
+                <li>OCR text recognition for captured images</li>
+                <li>Customizable timer presets</li>
+                <li>Widget and Siri integration</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Important Notice About Deletion</h2>
+            <div class="warning-box">
+                <strong>Warning:</strong> Automatic deletion is irreversible. Deleted photos cannot be recovered. Make sure to save important photos before the timer expires.
+            </div>
+            <p>Deletion may be delayed if:</p>
+            <ul>
+                <li>The app cannot refresh in the background</li>
+                <li>The device is turned off</li>
+                <li>Background refresh has been disabled</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Usage Rights</h2>
+            <p>You receive a non-exclusive, non-transferable right to use the App on your Apple devices. The App may not be:</p>
+            <ul>
+                <li>Modified or decompiled</li>
+                <li>Redistributed for commercial purposes</li>
+                <li>Used for illegal purposes</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Disclaimer</h2>
+            <p>The App is provided "as is". We assume no liability for:</p>
+            <ul>
+                <li>Data loss due to early or delayed deletion</li>
+                <li>Accidentally deleted important photos</li>
+                <li>Technical malfunctions</li>
+                <li>Damage caused by improper use</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Intellectual Property</h2>
+            <p>All rights to the App, including design, code, and trademarks, remain with CodeCraft.</p>
+        </div>
+
+        <div class="section">
+            <h2>7. Changes</h2>
+            <p>We reserve the right to update these terms. Material changes will be communicated in the App.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Governing Law</h2>
+            <p>German law applies. The place of jurisdiction is, where legally permissible, Moenchengladbach, Germany.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Contact</h2>
+            <p>For questions, contact us at:</p>
+            <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to Overview</a>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 CodeCraft · <a href="imprint.html">Imprint</a> · <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+</body>
+</html>
