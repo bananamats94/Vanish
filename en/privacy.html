@@ -150,7 +150,7 @@
 <body>
     <div class="header">
         <h1>Privacy Policy</h1>
-        <p>Vanish · Last updated: January 2025</p>
+        <p>Vanish · Last updated: October 2026</p>
     </div>
 
     <div class="container">
@@ -168,54 +168,64 @@
 
         <div class="section">
             <h2>2. What is Vanish?</h2>
-            <p>Vanish is a camera app that lets you take photos that are <strong>automatically deleted</strong> after a time you specify. Perfect for temporary photos like parking spots, price tags, or passwords.</p>
+            <p>Vanish is a camera and vault app for photos, videos, files and notes that are <strong>deleted automatically</strong> after a time you choose. You can also hand items over to other people as encrypted files.</p>
         </div>
 
         <div class="section">
-            <h2>3. What Data Do We Process?</h2>
-            <p>Vanish stores all data <strong>exclusively on your device</strong>:</p>
+            <h2>3. What data is processed, and where?</h2>
+            <p>Vanish has <strong>no account, no server of ours and no analytics</strong>. We never receive your photos, files, notes or any other content.</p>
             <ul>
-                <li><strong>Photos:</strong> Saved in the Vanish album in your photo library</li>
-                <li><strong>Timer settings:</strong> Your custom deletion times</li>
-                <li><strong>Preset configurations:</strong> Names, icons, and time settings</li>
+                <li><strong>Vault:</strong> Photos, videos, files and notes you put into Vanish are stored on your device, encrypted with AES-256-GCM. The key is kept in your device's Keychain and never leaves the device.</li>
+                <li><strong>Presets and settings:</strong> If iCloud is enabled, your presets and settings are synchronised through your own iCloud account (Apple's key-value storage). Vault content is not synchronised.</li>
+                <li><strong>Earlier versions:</strong> Versions before 1.5 could mirror vault entries and the text archive to your own iCloud account. Such old entries may still be there. You can delete them in iPhone Settings &rarr; [your name] &rarr; iCloud &rarr; Manage Storage &rarr; Vanish.</li>
+                <li><strong>Text recognition:</strong> Text in your photos (for example an IBAN or phone number) is recognised on the device. The optional text archive is encrypted and stays on the device.</li>
+                <li><strong>Purchases:</strong> Vanish Pro is bought through Apple. We receive no payment data.</li>
             </ul>
-            <p><strong>Important:</strong> We have no access to your photos or other data. Everything stays on your device.</p>
         </div>
 
         <div class="section">
-            <h2>4. Permissions</h2>
-            <p>Vanish requires the following permissions:</p>
+            <h2>4. Sealed handover</h2>
+            <p>When you hand an item over sealed, Vanish creates an encrypted <code>.vanish</code> file on your device. You send it yourself, through a messenger, AirDrop, email or any other way you choose. We are not involved and receive nothing.</p>
+            <p>The file contains the item and the conditions you set (for example how long it may be opened, how many views, or a place). If you protect it with a code, the code is not stored in the file. Received items are stored in the recipient's vault on the recipient's device.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Permissions</h2>
+            <p>Only the camera is needed to use Vanish. Everything else is optional:</p>
             <ul>
-                <li><strong>Camera:</strong> To take photos</li>
-                <li><strong>Photos:</strong> To save images to the Vanish album and delete them when they expire</li>
-                <li><strong>Background Refresh:</strong> To delete expired photos even in the background</li>
+                <li><strong>Camera / Microphone:</strong> To take photos and videos. The microphone is only used in video mode.</li>
+                <li><strong>Photos:</strong> To import a photo or keep a copy in your library, only when you choose to.</li>
+                <li><strong>Location:</strong> For deleting photos when you leave a place, and for place conditions on received handovers. Coordinates stay on the device and are never transmitted to us.</li>
+                <li><strong>Calendar:</strong> To delete a photo when an event ends. Only the end time is read.</li>
+                <li><strong>Face ID:</strong> To lock the vault. Handled entirely by iOS.</li>
+                <li><strong>Notifications and Background App Refresh:</strong> To remind you and to delete expired items while the app is closed.</li>
             </ul>
             <p>You can revoke these permissions at any time in iOS Settings.</p>
         </div>
 
         <div class="section">
-            <h2>5. Data Sharing</h2>
+            <h2>6. Data Sharing</h2>
             <p>We do <strong>not</strong> share your data with third parties. There is:</p>
             <ul>
                 <li>No advertising</li>
                 <li>No tracking services</li>
-                <li>No cloud synchronization</li>
-                <li>No analytics tools</li>
+                <li>No analytics or crash-reporting tools</li>
+                <li>No server operated by us</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>6. Your Rights</h2>
-            <p>You have the following rights at any time:</p>
+            <h2>7. Your Rights</h2>
+            <p>Under the GDPR you have the right to access, rectification, erasure, restriction and objection, and the right to lodge a complaint with a supervisory authority. Since we do not hold any of your data, you control it directly:</p>
             <ul>
-                <li><strong>Access:</strong> All data is visible on your device</li>
-                <li><strong>Deletion:</strong> Delete the app and all data is removed</li>
-                <li><strong>Control:</strong> You decide when photos are deleted</li>
+                <li><strong>Access:</strong> All data is visible in the app on your device</li>
+                <li><strong>Deletion:</strong> Delete items in the app, or delete the app to remove all data on the device; iCloud data can be deleted in iPhone Settings</li>
+                <li><strong>Control:</strong> You decide when items are deleted</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>7. Contact</h2>
+            <h2>8. Contact</h2>
             <p>For privacy questions, contact us at:</p>
             <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
         </div>
@@ -224,7 +234,7 @@
     </div>
 
     <div class="footer">
-        <p>© 2025 CodeCraft · <a href="imprint.html">Imprint</a> · <a href="terms.html">Terms of Service</a></p>
+        <p>© 2026 CodeCraft · <a href="imprint.html">Imprint</a> · <a href="terms.html">Terms of Service</a></p>
     </div>
 </body>
 </html>

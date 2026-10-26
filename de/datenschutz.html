@@ -150,7 +150,7 @@
 <body>
     <div class="header">
         <h1>Datenschutzerklärung</h1>
-        <p>Vanish · Stand: Januar 2025</p>
+        <p>Vanish · Stand: Oktober 2026</p>
     </div>
 
     <div class="container">
@@ -168,54 +168,64 @@
 
         <div class="section">
             <h2>2. Was ist Vanish?</h2>
-            <p>Vanish ist eine Kamera-App, mit der du Fotos aufnehmen kannst, die nach einer von dir festgelegten Zeit <strong>automatisch gelöscht</strong> werden. Perfekt für temporäre Aufnahmen wie Parkplatzfotos, Preisschilder oder Passwörter.</p>
+            <p>Vanish ist eine Kamera- und Tresor-App für Fotos, Videos, Dateien und Notizen, die nach einer von dir gewählten Zeit <strong>automatisch gelöscht</strong> werden. Du kannst Inhalte außerdem als verschlüsselte Datei an andere übergeben.</p>
         </div>
 
         <div class="section">
-            <h2>3. Welche Daten werden verarbeitet?</h2>
-            <p>Vanish speichert alle Daten <strong>ausschließlich lokal auf deinem Gerät</strong>:</p>
+            <h2>3. Welche Daten werden wo verarbeitet?</h2>
+            <p>Vanish hat <strong>kein Konto, keinen Server von uns und keine Analyse</strong>. Wir erhalten nie deine Fotos, Dateien, Notizen oder andere Inhalte.</p>
             <ul>
-                <li><strong>Fotos:</strong> Werden im Vanish-Album in deiner Foto-Mediathek gespeichert</li>
-                <li><strong>Timer-Einstellungen:</strong> Deine benutzerdefinierten Lösch-Zeitpunkte</li>
-                <li><strong>Preset-Konfigurationen:</strong> Namen, Icons und Zeiteinstellungen</li>
+                <li><strong>Tresor:</strong> Fotos, Videos, Dateien und Notizen in Vanish liegen auf deinem Gerät, verschlüsselt mit AES-256-GCM. Der Schlüssel liegt im Schlüsselbund deines Geräts und verlässt es nie.</li>
+                <li><strong>Presets und Einstellungen:</strong> Ist iCloud aktiv, werden deine Presets und Einstellungen über dein eigenes iCloud-Konto abgeglichen (Apples Schlüssel-Wert-Speicher). Tresor-Inhalte werden nicht abgeglichen.</li>
+                <li><strong>Frühere Versionen:</strong> Versionen vor 1.5 konnten Tresor-Einträge und das Textarchiv in dein eigenes iCloud-Konto spiegeln. Solche alten Einträge können dort noch liegen. Du kannst sie in den iPhone-Einstellungen &rarr; [dein Name] &rarr; iCloud &rarr; Speicher verwalten &rarr; Vanish löschen.</li>
+                <li><strong>Texterkennung:</strong> Text in deinen Fotos (zum Beispiel eine IBAN oder Telefonnummer) wird auf dem Gerät erkannt. Das optionale Textarchiv ist verschlüsselt und bleibt auf dem Gerät.</li>
+                <li><strong>Käufe:</strong> Vanish Pro wird über Apple gekauft. Wir erhalten keine Zahlungsdaten.</li>
             </ul>
-            <p><strong>Wichtig:</strong> Wir haben keinen Zugriff auf deine Fotos oder andere Daten. Alles bleibt auf deinem Gerät.</p>
         </div>
 
         <div class="section">
-            <h2>4. Berechtigungen</h2>
-            <p>Vanish benötigt folgende Berechtigungen:</p>
+            <h2>4. Versiegelte Übergabe</h2>
+            <p>Wenn du etwas versiegelt übergibst, erstellt Vanish auf deinem Gerät eine verschlüsselte <code>.vanish</code>-Datei. Du verschickst sie selbst, über einen Messenger, AirDrop, Mail oder einen anderen Weg deiner Wahl. Wir sind daran nicht beteiligt und erhalten nichts.</p>
+            <p>Die Datei enthält den Inhalt und die Bedingungen, die du festlegst (zum Beispiel wie lange sie geöffnet werden kann, wie viele Ansichten oder einen Ort). Schützt du sie mit einem Code, steht der Code nicht in der Datei. Empfangenes liegt im Tresor des Empfängers auf dessen Gerät.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Berechtigungen</h2>
+            <p>Für Vanish ist nur die Kamera nötig. Alles andere ist freiwillig:</p>
             <ul>
-                <li><strong>Kamera:</strong> Um Fotos aufzunehmen</li>
-                <li><strong>Fotos:</strong> Um Bilder im Vanish-Album zu speichern und nach Ablauf zu löschen</li>
-                <li><strong>Hintergrundaktualisierung:</strong> Um abgelaufene Fotos auch im Hintergrund zu löschen</li>
+                <li><strong>Kamera / Mikrofon:</strong> Für Fotos und Videos. Das Mikrofon wird nur im Videomodus genutzt.</li>
+                <li><strong>Fotos:</strong> Um ein Foto zu importieren oder eine Kopie in deiner Mediathek zu behalten, nur wenn du das wählst.</li>
+                <li><strong>Standort:</strong> Um Fotos zu löschen, wenn du einen Ort verlässt, und für Ortsbedingungen bei empfangenen Übergaben. Koordinaten bleiben auf dem Gerät und werden nie an uns übertragen.</li>
+                <li><strong>Kalender:</strong> Um ein Foto zu löschen, wenn ein Termin endet. Nur die Endzeit wird gelesen.</li>
+                <li><strong>Face ID:</strong> Um den Tresor zu sperren. Vollständig durch iOS abgewickelt.</li>
+                <li><strong>Mitteilungen und Hintergrundaktualisierung:</strong> Für Hinweise und um Abgelaufenes zu löschen, während die App geschlossen ist.</li>
             </ul>
             <p>Du kannst diese Berechtigungen jederzeit in den iOS-Einstellungen widerrufen.</p>
         </div>
 
         <div class="section">
-            <h2>5. Datenweitergabe</h2>
+            <h2>6. Weitergabe von Daten</h2>
             <p>Wir geben <strong>keine</strong> Daten an Dritte weiter. Es gibt:</p>
             <ul>
                 <li>Keine Werbung</li>
                 <li>Keine Tracking-Dienste</li>
-                <li>Keine Cloud-Synchronisation</li>
-                <li>Keine Analyse-Tools</li>
+                <li>Keine Analyse- oder Absturzberichts-Werkzeuge</li>
+                <li>Keinen von uns betriebenen Server</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>6. Deine Rechte</h2>
-            <p>Du hast jederzeit folgende Rechte:</p>
+            <h2>7. Deine Rechte</h2>
+            <p>Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch sowie das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Da wir keine deiner Daten haben, kontrollierst du sie direkt:</p>
             <ul>
-                <li><strong>Auskunft:</strong> Alle Daten sind auf deinem Gerät einsehbar</li>
-                <li><strong>Löschung:</strong> Lösche die App und alle Daten werden entfernt</li>
-                <li><strong>Kontrolle:</strong> Du bestimmst, wann Fotos gelöscht werden</li>
+                <li><strong>Auskunft:</strong> Alle Daten siehst du in der App auf deinem Gerät</li>
+                <li><strong>Löschung:</strong> Lösche Inhalte in der App oder lösche die App, um alle Daten auf dem Gerät zu entfernen; iCloud-Daten löschst du in den iPhone-Einstellungen</li>
+                <li><strong>Kontrolle:</strong> Du bestimmst, wann Inhalte gelöscht werden</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>7. Kontakt</h2>
+            <h2>8. Kontakt</h2>
             <p>Bei Fragen zum Datenschutz erreichst du uns unter:</p>
             <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
         </div>
@@ -224,7 +234,7 @@
     </div>
 
     <div class="footer">
-        <p>© 2025 CodeCraft · <a href="impressum.html">Impressum</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></p>
+        <p>© 2026 CodeCraft · <a href="impressum.html">Impressum</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></p>
     </div>
 </body>
 </html>
