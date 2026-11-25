@@ -150,7 +150,7 @@
 <body>
     <div class="header">
         <h1>Privacy Policy</h1>
-        <p>Vanish · Last updated: October 2026</p>
+        <p>Vanish · Last updated: 25 November 2026</p>
     </div>
 
     <div class="container">
@@ -173,7 +173,7 @@
 
         <div class="section">
             <h2>3. What data is processed, and where?</h2>
-            <p>Vanish has <strong>no account, no server of ours and no analytics</strong>. We never receive your photos, files, notes or any other content.</p>
+            <p>Vanish has <strong>no account and no analytics</strong>. We never receive your photos, files, notes or any other content in readable form. The only exception is the mailbox for handovers by link (section 4) and for answers to requests (section 5), which holds only encrypted files that we cannot read.</p>
             <ul>
                 <li><strong>Vault:</strong> Photos, videos, files and notes you put into Vanish are stored on your device, encrypted with AES-256-GCM. The key is kept in your device's Keychain and never leaves the device.</li>
                 <li><strong>Presets and settings:</strong> If iCloud is enabled, your presets and settings are synchronised through your own iCloud account (Apple's key-value storage). Vault content is not synchronised.</li>
@@ -185,12 +185,34 @@
 
         <div class="section">
             <h2>4. Sealed handover</h2>
-            <p>When you hand an item over sealed, Vanish creates an encrypted <code>.vanish</code> file on your device. You send it yourself, through a messenger, AirDrop, email or any other way you choose. We are not involved and receive nothing.</p>
+            <p>When you hand an item over sealed, Vanish creates an encrypted <code>.vanish</code> file on your device. You send it yourself, through a messenger, AirDrop, email or any other way you choose. When you hand over a file, we are not involved and receive nothing.</p>
             <p>The file contains the item and the conditions you set (for example how long it may be opened, how many views, or a place). If you protect it with a code, the code is not stored in the file. Received items are stored in the recipient's vault on the recipient's device.</p>
+            <p><strong>Handover by link:</strong> If you share a sealed handover as a link instead of a file, your app uploads the encrypted file to the mailbox (section 5, same service provider), and the recipient loads it through the link in the app or in the browser on <code>vanishapp.app</code>. The key is only in the link itself (in the part after the <code>#</code>, which browsers never send to a server) or is protected by your code, which you send separately. We cannot read the content.</p>
+            <ul>
+                <li><strong>What is stored there:</strong> the encrypted file, the link ID (a random number), the file size, the time of upload, the validity, whether the link may be opened only once, a check value of your app's delete key, and the number of fetches and whether the link has been opened.</li>
+                <li><strong>Protection against abuse:</strong> Only the genuine Vanish app may upload. For this it uses Apple App Attest: the mailbox stores, per device, an App Attest key ID, the matching public key, a counter, the time of registration and the time of last use. If a device is not used to upload for 12 months, the mailbox deletes this data together with the daily count; the app registers again when needed. It also counts, per device and day, the number and size of uploaded files (daily limit); earlier days are deleted with the next upload. None of this contains a name, Apple ID or phone number.</li>
+                <li><strong>How long:</strong> until the link expires, for “view once” until it is first opened, at most 31 days after upload. Then the file is permanently deleted. Emergency wipe makes your app withdraw links that have not been opened yet.</li>
+                <li><strong>Legal basis:</strong> The handover is based on Art. 6(1)(b) GDPR, the App Attest check and the daily limits on Art. 6(1)(f) GDPR (protecting the storage against abuse). IP addresses and third countries are handled as described in section 5.</li>
+            </ul>
+            <p>If you prefer not to use the mailbox, you can still hand over a file.</p>
         </div>
 
         <div class="section">
-            <h2>5. Permissions</h2>
+            <h2>5. Mailbox for answers to requests</h2>
+            <p>When you <strong>request</strong> something in Vanish and the link says so, the person answering can deliver their answer automatically. To do that, they put the encrypted answer into a mailbox, and your app picks it up from there. This section covers requests; handovers by link are described in section 4.</p>
+            <ul>
+                <li><strong>What is stored there:</strong> the encrypted answer files, the request ID (a random number), the file sizes and the time of upload. Also the validity of the request and a check value of the pickup key that only your app can use to collect. If notifications were allowed when you created the request, the mailbox also stores your iPhone's Apple device token so you can be notified of new answers. The token belongs to that request and is kept until the request expires or is deleted.</li>
+                <li><strong>What is not stored there:</strong> no names, texts, file names, keys or phone numbers. The content is encrypted so that only your iPhone can open it. We cannot read it.</li>
+                <li><strong>How long:</strong> until your app picks it up. At the latest 7 days after the request expires nothing is delivered any more, and at the latest 16 days after upload everything is permanently deleted, including the device token. If you delete the request in the app or use emergency wipe, the mailbox is emptied as well.</li>
+                <li><strong>Service providers:</strong> The mailbox runs at Cloudflare, Inc. (hosting and storage). Notifications are delivered through Apple (Apple Push Notification Service). The notification contains no content of the request.</li>
+                <li><strong>IP addresses:</strong> We do not store IP addresses in the mailbox; Cloudflare processes them briefly for technical reasons, among other things for rate limiting. We keep no logs of content or people.</li>
+                <li><strong>Legal basis and third countries:</strong> Delivering the answer is based on Art. 6(1)(b) GDPR, limiting abuse on Art. 6(1)(f) GDPR. The device token is stored only if notifications were allowed when the request was created, and only until the request expires or is deleted. Cloudflare and Apple may also process data in the USA, on the basis of data processing agreements, EU standard contractual clauses or the EU-US Data Privacy Framework.</li>
+            </ul>
+            <p>If you prefer not to use the mailbox, the answer can still be sent back as a file.</p>
+        </div>
+
+        <div class="section">
+            <h2>6. Permissions</h2>
             <p>Only the camera is needed to use Vanish. Everything else is optional:</p>
             <ul>
                 <li><strong>Camera / Microphone:</strong> To take photos and videos. The microphone is only used in video mode.</li>
@@ -198,34 +220,35 @@
                 <li><strong>Location:</strong> For deleting photos when you leave a place, and for place conditions on received handovers. Coordinates stay on the device and are never transmitted to us.</li>
                 <li><strong>Calendar:</strong> To delete a photo when an event ends. Only the end time is read.</li>
                 <li><strong>Face ID:</strong> To lock the vault. Handled entirely by iOS.</li>
-                <li><strong>Notifications and Background App Refresh:</strong> To remind you and to delete expired items while the app is closed.</li>
+                <li><strong>Notifications and Background App Refresh:</strong> To remind you, to delete expired items and to notify you of new answers to your requests while the app is closed. An Apple device token is used for this (section 5).</li>
             </ul>
             <p>You can revoke these permissions at any time in iOS Settings.</p>
         </div>
 
         <div class="section">
-            <h2>6. Data Sharing</h2>
-            <p>We do <strong>not</strong> share your data with third parties. There is:</p>
+            <h2>7. Data Sharing</h2>
+            <p>We do <strong>not</strong> share your data with third parties, except with the service providers of the mailbox (sections 4 and 5). There is:</p>
             <ul>
                 <li>No advertising</li>
                 <li>No tracking services</li>
                 <li>No analytics or crash-reporting tools</li>
-                <li>No server operated by us</li>
+                <li>No server on which we can read content (the mailbox in sections 4 and 5 stores only encrypted handovers and answers until they are opened, picked up or expire)</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>7. Your Rights</h2>
-            <p>Under the GDPR you have the right to access, rectification, erasure, restriction and objection, and the right to lodge a complaint with a supervisory authority. Since we do not hold any of your data, you control it directly:</p>
+            <h2>8. Your Rights</h2>
+            <p>Under the GDPR you have the right to access, rectification, erasure, restriction and objection, and the right to lodge a complaint with a supervisory authority. The mailbox holds only encrypted data that we cannot attribute to any person. You control most of it directly. You can also exercise your rights under Art. 15–21 GDPR at any time via support@codecraftcom.de:</p>
             <ul>
                 <li><strong>Access:</strong> All data is visible in the app on your device</li>
                 <li><strong>Deletion:</strong> Delete items in the app, or delete the app to remove all data on the device; iCloud data can be deleted in iPhone Settings</li>
+                <li><strong>Mailbox:</strong> Deleting the request in the app or using emergency wipe empties the mailbox; otherwise nothing is delivered any more 7 days after the request expires at the latest, and everything is permanently deleted 16 days after upload at the latest. Handovers by link are deleted when they expire, for “view once” after the first opening, at the latest 31 days after upload.</li>
                 <li><strong>Control:</strong> You decide when items are deleted</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>8. Contact</h2>
+            <h2>9. Contact</h2>
             <p>For privacy questions, contact us at:</p>
             <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
         </div>

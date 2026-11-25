@@ -150,7 +150,7 @@
 <body>
     <div class="header">
         <h1>Datenschutzerklärung</h1>
-        <p>Vanish · Stand: Oktober 2026</p>
+        <p>Vanish · Stand: 25.11.2026</p>
     </div>
 
     <div class="container">
@@ -173,7 +173,7 @@
 
         <div class="section">
             <h2>3. Welche Daten werden wo verarbeitet?</h2>
-            <p>Vanish hat <strong>kein Konto, keinen Server von uns und keine Analyse</strong>. Wir erhalten nie deine Fotos, Dateien, Notizen oder andere Inhalte.</p>
+            <p>Vanish hat <strong>kein Konto und keine Analyse</strong>. Wir erhalten nie deine Fotos, Dateien, Notizen oder andere Inhalte im Klartext. Einzige Ausnahme ist der Briefkasten für Übergaben per Link (Abschnitt 4) und für Antworten auf Anfragen (Abschnitt 5), in dem nur verschlüsselte Dateien liegen, die wir nicht lesen können.</p>
             <ul>
                 <li><strong>Tresor:</strong> Fotos, Videos, Dateien und Notizen in Vanish liegen auf deinem Gerät, verschlüsselt mit AES-256-GCM. Der Schlüssel liegt im Schlüsselbund deines Geräts und verlässt es nie.</li>
                 <li><strong>Presets und Einstellungen:</strong> Ist iCloud aktiv, werden deine Presets und Einstellungen über dein eigenes iCloud-Konto abgeglichen (Apples Schlüssel-Wert-Speicher). Tresor-Inhalte werden nicht abgeglichen.</li>
@@ -185,12 +185,34 @@
 
         <div class="section">
             <h2>4. Versiegelte Übergabe</h2>
-            <p>Wenn du etwas versiegelt übergibst, erstellt Vanish auf deinem Gerät eine verschlüsselte <code>.vanish</code>-Datei. Du verschickst sie selbst, über einen Messenger, AirDrop, Mail oder einen anderen Weg deiner Wahl. Wir sind daran nicht beteiligt und erhalten nichts.</p>
+            <p>Wenn du etwas versiegelt übergibst, erstellt Vanish auf deinem Gerät eine verschlüsselte <code>.vanish</code>-Datei. Du verschickst sie selbst, über einen Messenger, AirDrop, Mail oder einen anderen Weg deiner Wahl. Bei der Übergabe als Datei sind wir daran nicht beteiligt und erhalten nichts.</p>
             <p>Die Datei enthält den Inhalt und die Bedingungen, die du festlegst (zum Beispiel wie lange sie geöffnet werden kann, wie viele Ansichten oder einen Ort). Schützt du sie mit einem Code, steht der Code nicht in der Datei. Empfangenes liegt im Tresor des Empfängers auf dessen Gerät.</p>
+            <p><strong>Übergabe per Link:</strong> Teilst du eine versiegelte Übergabe als Link statt als Datei, lädt deine App die verschlüsselte Datei in den Briefkasten (Abschnitt 5, gleicher Dienstleister), und der Empfänger lädt sie über den Link in der App oder im Browser auf <code>vanishapp.app</code>. Der Schlüssel steht nur im Link selbst (im Teil nach dem <code>#</code>, den Browser nie an einen Server senden) oder wird durch deinen Code geschützt, den du getrennt verschickst. Wir können den Inhalt nicht lesen.</p>
+            <ul>
+                <li><strong>Was dort liegt:</strong> die verschlüsselte Datei, die Link-ID (eine Zufallszahl), die Dateigröße, der Zeitpunkt des Hochladens, die Gültigkeit, ob der Link nur einmal geöffnet werden darf, ein Prüfwert des Löschschlüssels deiner App sowie die Zahl der Abrufe und ob der Link schon geöffnet wurde.</li>
+                <li><strong>Schutz vor Missbrauch:</strong> Hochladen darf nur die echte Vanish-App. Dafür nutzt sie Apple App Attest: Der Briefkasten speichert je Gerät eine App-Attest-Schlüssel-ID, den zugehörigen öffentlichen Schlüssel, einen Zähler, den Zeitpunkt der Anmeldung und den Zeitpunkt der letzten Benutzung. Wird ein Gerät 12 Monate lang nicht zum Hochladen benutzt, löscht der Briefkasten diese Angaben samt Tageszählung; die App meldet sich bei Bedarf neu an. Außerdem zählt er je Gerät und Tag die Zahl und Größe der hochgeladenen Dateien (Tagesgrenze); beim nächsten Hochladen werden ältere Tage gelöscht. Diese Angaben enthalten keinen Namen, keine Apple-ID und keine Telefonnummer.</li>
+                <li><strong>Wie lange:</strong> bis zum Ablauf der Gültigkeit, bei „Nur einmal ansehen“ bis zum ersten Öffnen, höchstens 31 Tage nach dem Hochladen. Danach wird die Datei endgültig gelöscht. Beim Notfall-Löschen zieht deine App noch nicht geöffnete Links zurück.</li>
+                <li><strong>Rechtsgrundlage:</strong> Die Übergabe beruht auf Art. 6 Abs. 1 lit. b DSGVO, die Prüfung mit App Attest und die Tagesgrenzen auf Art. 6 Abs. 1 lit. f DSGVO (Schutz vor Missbrauch des Speichers). Für IP-Adressen und Drittländer gilt dasselbe wie in Abschnitt 5.</li>
+            </ul>
+            <p>Wer lieber keinen Briefkasten nutzen möchte, kann weiterhin als Datei übergeben.</p>
         </div>
 
         <div class="section">
-            <h2>5. Berechtigungen</h2>
+            <h2>5. Briefkasten für Antworten auf Anfragen</h2>
+            <p>Wenn du in Vanish etwas <strong>anfragst</strong> und der Link das anzeigt, kann die antwortende Person ihre Antwort automatisch zustellen. Dafür legt sie die verschlüsselte Antwort in einen Briefkasten, aus dem deine App sie abholt. Dieser Abschnitt gilt für Anfragen; Übergaben per Link beschreibt Abschnitt 4.</p>
+            <ul>
+                <li><strong>Was dort liegt:</strong> die verschlüsselten Antwortdateien, die Anfrage-ID (eine Zufallszahl), die Dateigrößen und der Zeitpunkt des Hochladens. Außerdem die Gültigkeit der Anfrage und ein Prüfwert des Abholschlüssels, mit dem nur deine App abholen kann. Hattest du Mitteilungen erlaubt, als du die Anfrage erstellt hast, speichert der Briefkasten zusätzlich das Apple-Geräte-Token deines iPhones, damit du über neue Antworten benachrichtigt wirst. Das Token gehört zu dieser Anfrage und bleibt, bis die Anfrage abläuft oder gelöscht wird.</li>
+                <li><strong>Was dort nicht liegt:</strong> keine Namen, Texte, Dateinamen, Schlüssel oder Telefonnummern. Der Inhalt ist so verschlüsselt, dass nur dein iPhone ihn öffnen kann. Wir können ihn nicht lesen.</li>
+                <li><strong>Wie lange:</strong> bis zur Abholung durch deine App. Spätestens 7 Tage nach Ablauf der Anfrage wird nichts mehr ausgeliefert, und spätestens 16 Tage nach dem Hochladen wird alles endgültig gelöscht, auch das Geräte-Token. Löschst du die Anfrage in der App oder nutzt das Notfall-Löschen, wird auch der Briefkasten geleert.</li>
+                <li><strong>Dienstleister:</strong> Der Briefkasten läuft bei Cloudflare, Inc. (Hosting und Speicherung). Benachrichtigungen werden über Apple (Apple Push Notification Service) zugestellt. Die Mitteilung enthält keinen Inhalt der Anfrage.</li>
+                <li><strong>IP-Adressen:</strong> Wir speichern IP-Adressen nicht im Briefkasten; Cloudflare verarbeitet sie technisch bedingt kurzzeitig, u. a. für die Mengenbegrenzung. Wir führen keine Protokolle über Inhalte oder Personen.</li>
+                <li><strong>Rechtsgrundlage und Drittländer:</strong> Die Zustellung der Antwort beruht auf Art. 6 Abs. 1 lit. b DSGVO, die Begrenzung von Missbrauch auf Art. 6 Abs. 1 lit. f DSGVO. Das Geräte-Token wird nur gespeichert, wenn du Mitteilungen erlaubt hattest, als die Anfrage erstellt wurde, und nur bis die Anfrage abläuft oder gelöscht wird. Cloudflare und Apple können Daten auch in den USA verarbeiten, auf Grundlage von Auftragsverarbeitungsverträgen, EU-Standardvertragsklauseln bzw. des EU-US Data Privacy Framework.</li>
+            </ul>
+            <p>Wer lieber keinen Briefkasten nutzen möchte, kann die Antwort weiterhin als Datei zurückschicken.</p>
+        </div>
+
+        <div class="section">
+            <h2>6. Berechtigungen</h2>
             <p>Für Vanish ist nur die Kamera nötig. Alles andere ist freiwillig:</p>
             <ul>
                 <li><strong>Kamera / Mikrofon:</strong> Für Fotos und Videos. Das Mikrofon wird nur im Videomodus genutzt.</li>
@@ -198,34 +220,35 @@
                 <li><strong>Standort:</strong> Um Fotos zu löschen, wenn du einen Ort verlässt, und für Ortsbedingungen bei empfangenen Übergaben. Koordinaten bleiben auf dem Gerät und werden nie an uns übertragen.</li>
                 <li><strong>Kalender:</strong> Um ein Foto zu löschen, wenn ein Termin endet. Nur die Endzeit wird gelesen.</li>
                 <li><strong>Face ID:</strong> Um den Tresor zu sperren. Vollständig durch iOS abgewickelt.</li>
-                <li><strong>Mitteilungen und Hintergrundaktualisierung:</strong> Für Hinweise und um Abgelaufenes zu löschen, während die App geschlossen ist.</li>
+                <li><strong>Mitteilungen und Hintergrundaktualisierung:</strong> Für Hinweise, um Abgelaufenes zu löschen und um dich über neue Antworten auf deine Anfragen zu benachrichtigen, während die App geschlossen ist. Dafür wird ein Apple-Geräte-Token verwendet (Abschnitt 5).</li>
             </ul>
             <p>Du kannst diese Berechtigungen jederzeit in den iOS-Einstellungen widerrufen.</p>
         </div>
 
         <div class="section">
-            <h2>6. Weitergabe von Daten</h2>
-            <p>Wir geben <strong>keine</strong> Daten an Dritte weiter. Es gibt:</p>
+            <h2>7. Weitergabe von Daten</h2>
+            <p>Wir geben <strong>keine</strong> Daten an Dritte weiter, außer an die Dienstleister des Briefkastens (Abschnitte 4 und 5). Es gibt:</p>
             <ul>
                 <li>Keine Werbung</li>
                 <li>Keine Tracking-Dienste</li>
                 <li>Keine Analyse- oder Absturzberichts-Werkzeuge</li>
-                <li>Keinen von uns betriebenen Server</li>
+                <li>Keinen Server, auf dem wir Inhalte lesen können (der Briefkasten in den Abschnitten 4 und 5 speichert nur verschlüsselte Übergaben und Antworten, bis sie geöffnet, abgeholt oder abgelaufen sind)</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>7. Deine Rechte</h2>
-            <p>Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch sowie das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Da wir keine deiner Daten haben, kontrollierst du sie direkt:</p>
+            <h2>8. Deine Rechte</h2>
+            <p>Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch sowie das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Der Briefkasten enthält nur verschlüsselte Daten, die wir keiner Person zuordnen können. Das meiste kontrollierst du direkt. Deine Rechte nach Art. 15–21 DSGVO kannst du außerdem jederzeit über support@codecraftcom.de ausüben:</p>
             <ul>
                 <li><strong>Auskunft:</strong> Alle Daten siehst du in der App auf deinem Gerät</li>
                 <li><strong>Löschung:</strong> Lösche Inhalte in der App oder lösche die App, um alle Daten auf dem Gerät zu entfernen; iCloud-Daten löschst du in den iPhone-Einstellungen</li>
+                <li><strong>Briefkasten:</strong> Anfrage in der App löschen oder Notfall-Löschen leert den Briefkasten; sonst wird er spätestens 7 Tage nach Ablauf der Anfrage nicht mehr ausgeliefert und spätestens 16 Tage nach dem Hochladen endgültig gelöscht. Übergaben per Link werden nach Ablauf, bei „Nur einmal ansehen“ nach dem ersten Öffnen, spätestens 31 Tage nach dem Hochladen gelöscht.</li>
                 <li><strong>Kontrolle:</strong> Du bestimmst, wann Inhalte gelöscht werden</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>8. Kontakt</h2>
+            <h2>9. Kontakt</h2>
             <p>Bei Fragen zum Datenschutz erreichst du uns unter:</p>
             <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
         </div>

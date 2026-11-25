@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["4737WR3QKT.com.matthiassteins.Vanish"],
+        "components": [
+          { "/": "/open/*", "#": "b1=*", "comment": "Briefkasten-Link (versiegelte Übergabe)" },
+          { "/": "/*/open/*", "#": "b1=*", "comment": "Briefkasten-Link, Sprachpfad" },
+          { "/": "/request/*", "#": "r1=*", "comment": "Anfrage-Link" },
+          { "/": "/*/request/*", "#": "r1=*", "comment": "Anfrage-Link, Sprachpfad" }
+        ]
+      }
+    ]
+  }
+}
